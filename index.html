@@ -2,17 +2,64 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile Card Component</title>
 
+    <!-- Google Font Link Here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
     <!-- CSS link Here -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .main-bg {
+            background: url(./images/bg-pattern-top.svg) top left no-repeat,
+                url(./images/bg-pattern-bottom.svg) bottom right no-repeat,
+                #19a2ae;
+            background-size: 40%;
+        }
+
+        .card-bg {
+            background-image: url(./images/bg-pattern-card.png);
+        }
+
+        @media screen and (max-width:576px) {
+            .main-bg {
+                background: url(./images/bg-pattern-top.svg) -200px -200px no-repeat,
+                    url(./images/bg-pattern-bottom.svg) 250px 600px no-repeat,
+                    #19a2ae;
+                background-size: contain;
+            }
+        }
+    </style>
 </head>
 
-<body>
-    <main>
-
+<body class="font-kumbh-sans">
+    <main class="main-bg h-screen w-screen flex justify-center items-center">
+        <section id="card" class="w-80 bg-white text-center rounded-2xl pb-4">
+            <div class="h-36 w-80 card-bg overflow-hidden rounded-t-2xl -mb-12"></div>
+            <img src="./images/image-victor.jpg" alt="" class="ring-4 ring-white rounded-full mx-auto mb-4" />
+            <h1 class="text-very-dark-desaturated-blue font-bold">Victor Crest <span
+                    class="font-normal text-dark-gray mr-4 inline-block">26</span></h1>
+            <p class="text-dark-gray text-sm">London</p>
+            <hr class="my-6" />
+            <div class="flex justify-evenly">
+                <div class="text-dark-gray text-sm">
+                    <h2 class="font-bold text-xl text-very-dark-desaturated-blue">80K</h2>
+                    <p class="text-dark-gray text-xs tracking-widest">Followers</p>
+                </div>
+                <div class="text-dark-gray text-sm">
+                    <h2 class="font-bold text-xl text-very-dark-desaturated-blue">803K</h2>
+                    <p class="text-dark-gray text-xs tracking-widest">Likes</p>
+                </div>
+                <div class="text-dark-gray text-sm">
+                    <h2 class="font-bold text-xl text-very-dark-desaturated-blue">1.4K</h2>
+                    <p class="text-dark-gray text-xs tracking-widest">Photos</p>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 
